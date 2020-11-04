@@ -186,7 +186,7 @@
                     <navigationItem key="navigationItem" id="jde-YU-K95"/>
                     <connections>
                         <outlet property="email" destination="auh-PV-RnA" id="nXa-ee-eKU"/>
-                        <outlet property="error" destination="4wb-25-drQ" id="4yR-IY-gd1"/>
+                        <outlet property="errorLabel" destination="4wb-25-drQ" id="BhT-cg-NsN"/>
                         <outlet property="firstName" destination="jW3-tX-AGs" id="EMS-OS-KkS"/>
                         <outlet property="lastName" destination="aYJ-ou-sdX" id="DP9-2b-Ezu"/>
                         <outlet property="password" destination="pxM-wG-QsQ" id="ddG-e7-JjR"/>

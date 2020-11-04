@@ -15,11 +15,11 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var error: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        error.isHidden = true
+        errorLabel.isHidden = true
         
     }
     
@@ -40,15 +40,16 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func registrationTapped(_ sender: Any) {
-        if checkValid() != nil {
-            error.isHidden = false
-            error.text = checkValid()
+        let error = checkValid()
+        if error != nil {
+            errorLabel.isHidden = false
+            errorLabel.text = error
         } else {
             Auth.auth().createUser(withEmail: email.text!,
                                    password: password.text!) {
-                (result, error) in
-                if error != nil {
-                    self.error.text = "\(String(describing: error?.localizedDescription))"
+                (result, error2) in
+                if error2 != nil {
+                    self.errorLabel.text = "\(String(describing: error2?.localizedDescription))"
                 } else {
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["firstname": self.firstName.text!,
@@ -56,9 +57,10 @@ class SignInViewController: UIViewController {
                                                               "uid": result!.user.uid
                     ]) { (error) in
                         if error != nil {
-                            fatalError("Error savong user in DB!")
+                            print("Error savong user in DB!")
                         }
                     }
+                    
                 }
                 
             }

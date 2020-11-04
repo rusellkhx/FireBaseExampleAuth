@@ -13,6 +13,7 @@
 		428B72E22551C9B7007B13D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428B72E12551C9B7007B13D8 /* Assets.xcassets */; };
 		428B72E52551C9B7007B13D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428B72E32551C9B7007B13D8 /* LaunchScreen.storyboard */; };
 		428B72F02551CA97007B13D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 428B72EF2551CA97007B13D8 /* GoogleService-Info.plist */; };
+		42E511C0255210C300E88E0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E511BF255210C300E88E0F /* SceneDelegate.swift */; };
 		42EBAA742551D99600932747 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EBAA732551D99600932747 /* AuthViewController.swift */; };
 		42EBAA772551D9C100932747 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EBAA762551D9C100932747 /* SignInViewController.swift */; };
 		42EBAA7A2551D9CD00932747 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EBAA792551D9CD00932747 /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 		428B72E42551C9B7007B13D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		428B72E62551C9B7007B13D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428B72EF2551CA97007B13D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42E511BF255210C300E88E0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		42EBAA732551D99600932747 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		42EBAA762551D9C100932747 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		42EBAA792551D9CD00932747 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				42EBAA762551D9C100932747 /* SignInViewController.swift */,
 				42EBAA792551D9CD00932747 /* LoginViewController.swift */,
 				42EBAA7C2551D9F500932747 /* PageViewController.swift */,
+				42E511BF255210C300E88E0F /* SceneDelegate.swift */,
 			);
 			path = FireBaseExample;
 			sourceTree = "<group>";
@@ -114,8 +117,8 @@
 				428B72D12551C9B6007B13D8 /* Sources */,
 				428B72D22551C9B6007B13D8 /* Frameworks */,
 				428B72D32551C9B6007B13D8 /* Resources */,
-				8F12065EE2F2361768913FC0 /* [CP] Embed Pods Frameworks */,
-				042A559F7F8126128B3EFDB2 /* [CP] Copy Pods Resources */,
+				E3683716272FB1C5083DAF2C /* [CP] Embed Pods Frameworks */,
+				28F8194CCD5DEF1EDF291A30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,23 +176,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		042A559F7F8126128B3EFDB2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FireBaseExample/Pods-FireBaseExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FireBaseExample/Pods-FireBaseExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireBaseExample/Pods-FireBaseExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		062DA3D5391EDCB0C318D836 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,7 +198,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F12065EE2F2361768913FC0 /* [CP] Embed Pods Frameworks */ = {
+		28F8194CCD5DEF1EDF291A30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireBaseExample/Pods-FireBaseExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireBaseExample/Pods-FireBaseExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireBaseExample/Pods-FireBaseExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3683716272FB1C5083DAF2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42EBAA772551D9C100932747 /* SignInViewController.swift in Sources */,
+				42E511C0255210C300E88E0F /* SceneDelegate.swift in Sources */,
 				428B72DD2551C9B6007B13D8 /* ViewController.swift in Sources */,
 				42EBAA742551D99600932747 /* AuthViewController.swift in Sources */,
 				42EBAA7D2551D9F500932747 /* PageViewController.swift in Sources */,
@@ -318,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -373,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MX627F9AXS;
 				INFOPLIST_FILE = FireBaseExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +404,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rusellkh87.FireBaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -413,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MX627F9AXS;
 				INFOPLIST_FILE = FireBaseExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rusellkh87.FireBaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
