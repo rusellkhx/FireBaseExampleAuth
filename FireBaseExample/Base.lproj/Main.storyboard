@@ -65,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-na-1wx">
-                                <rect key="frame" x="40" y="128" width="334" height="260.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="210"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-Pr-vkJ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -87,12 +87,6 @@
                                             <action selector="autorizationTapped:" destination="lTQ-7W-W10" eventType="touchUpInside" id="ItK-o2-mOq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1W-mq-ORq">
-                                        <rect key="frame" x="0.0" y="240" width="334" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="x5g-OD-fRQ" firstAttribute="height" secondItem="ttH-Pr-vkJ" secondAttribute="height" id="1ay-gm-nu5"/>
@@ -110,9 +104,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="FAH-8F-sf2"/>
                     <connections>
-                        <outlet property="email" destination="ttH-Pr-vkJ" id="aUS-IB-dal"/>
-                        <outlet property="error" destination="O1W-mq-ORq" id="PAW-G4-jwu"/>
-                        <outlet property="password" destination="x5g-OD-fRQ" id="mdl-jH-3aZ"/>
+                        <outlet property="emailTextField" destination="ttH-Pr-vkJ" id="YmE-Cg-o0R"/>
+                        <outlet property="passwordTextField" destination="x5g-OD-fRQ" id="ux2-PF-BeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyw-bV-N6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -128,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4de-3y-eSi">
-                                <rect key="frame" x="40" y="128" width="334" height="420.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="370"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-tX-AGs">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -160,12 +153,6 @@
                                             <action selector="registrationTapped:" destination="9jW-rv-d4K" eventType="touchUpInside" id="J13-GC-33w"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wb-25-drQ">
-                                        <rect key="frame" x="0.0" y="400" width="334" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="auh-PV-RnA" firstAttribute="height" secondItem="jW3-tX-AGs" secondAttribute="height" id="6Ik-dc-rKz"/>
@@ -185,11 +172,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="jde-YU-K95"/>
                     <connections>
-                        <outlet property="email" destination="auh-PV-RnA" id="nXa-ee-eKU"/>
-                        <outlet property="errorLabel" destination="4wb-25-drQ" id="BhT-cg-NsN"/>
-                        <outlet property="firstName" destination="jW3-tX-AGs" id="EMS-OS-KkS"/>
-                        <outlet property="lastName" destination="aYJ-ou-sdX" id="DP9-2b-Ezu"/>
-                        <outlet property="password" destination="pxM-wG-QsQ" id="ddG-e7-JjR"/>
+                        <outlet property="emailTextField" destination="auh-PV-RnA" id="1Mc-Ex-hEE"/>
+                        <outlet property="firstNameTextField" destination="jW3-tX-AGs" id="7hT-y1-mGz"/>
+                        <outlet property="lastNameTextField" destination="aYJ-ou-sdX" id="Lak-iD-3FD"/>
+                        <outlet property="passwordTextField" destination="pxM-wG-QsQ" id="36V-1D-sss"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhU-Zg-1Fy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
